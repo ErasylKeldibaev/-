@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ course.title }}</title>
+</head>
+<body>
+    <h1>{{ course.title }}</h1>
+    <p>{{ course.description }}</p>
+    <h2>Videos</h2>
+    <ul>
+        {% for video in course.videos.all %}
+        <li><a href="{% url 'video_detail' video.pk %}">{{ video.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
