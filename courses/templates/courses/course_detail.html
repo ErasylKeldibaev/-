@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'courses/course_detail.css' %}">
     <title>{{ course.title }}</title>
 </head>
-<body>
-    <h1>{{ course.title }}</h1>
-    <p>{{ course.description }}</p>
-    <h2>Videos</h2>
+<!-- <body style="background-image: { 'url('/static/courses/images/image.jpeg');' if course.title == 'Math_1' else 'url('/static/courses/images/english.jpg');' if course.title == 'English_1' else 'none' };"> -->
+<body style="{% if course.title == 'Math_1' %}background-image: url('/static/courses/images/math11.jpg');{% elif course.title == 'English_1' %}background-image: url('/static/courses/images/english.jpg');{% elif course.title == 'German_1' %}background-image: url('/static/courses/images/german.jpg');{% elif course.title == 'Python_1' %}background-image: url('/static/courses/images/python.jpg');{% else %}background-image: none;{% endif %}">
+ 
+    <h1 style="color: cornflowerblue;">{{ course.title }}</h1>
+    <p style="color: cornflowerblue;">{{ course.description }}</p>
+    <h2 style="color: cornflowerblue;">Videos</h2>
     <ul>
         {% for video in course.videos.all %}
         <li><a href="{% url 'video_detail' video.pk %}">{{ video.title }}</a></li>

@@ -1,0 +1,105 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+
+    background-image: url('/static/courses/images/image.jpeg');
+    background-size: cover; /* Подгонка изображения по размеру экрана */
+    background-repeat: no-repeat; /* Отключение повторения изображения */
+
+    color: #272626;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Заголовки */
+h1, h2 {
+    text-align: center;
+    color: #fff;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Описание курса */
+p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Список видео */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Ссылки */
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    ul {
+        margin: 10px;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+}

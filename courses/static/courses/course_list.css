@@ -1,0 +1,75 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+
+    background-image: url('/static/courses/images/image.jpeg');
+    background-size: cover; /* Масштабирует изображение для заполнения всей области */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+
+    color: #146fde;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    color: #1a4dd8;
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+/* Список курсов */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+li {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #3d51e9;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    ul {
+        margin: 10px;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+}
